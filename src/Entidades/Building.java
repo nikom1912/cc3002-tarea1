@@ -1,11 +1,10 @@
 package Entidades;
 
-public abstract class Unit implements Attackable, Attacker{
-    private int HP,DMG, HPMax;
+public abstract class Building implements Attackable{
+    private int HP, HPMax;
 
-    public Unit(int HP, int DMG, int HPMax){
+    public Building(int HP, int HPMax){
         this.HP = HP;
-        this.DMG = DMG;
         this.HPMax = HPMax;
     }
 
@@ -18,5 +17,4 @@ public abstract class Unit implements Attackable, Attacker{
     public void attacked(int DMG) {
         this.HP = (this.HP - DMG > this.HPMax) ? this.HPMax : this.HP - DMG;
     }
-    public abstract void attack(Attackable a);
 }
