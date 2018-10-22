@@ -15,6 +15,10 @@ public abstract class Building implements Attackable{
         return (this.HP > 0);
     }
     public void attacked(int DMG) {
-        this.HP = (this.HP - DMG > this.HPMax) ? this.HPMax : this.HP - DMG;
+        this.HP = (this.HP - DMG > this.HPMax) ? this.HPMax : this.HP - DMG ;
+        if(this.HP <= 0){
+            this.HP = 0;
+            this.HPMax = 0;
+        }
     }
 }

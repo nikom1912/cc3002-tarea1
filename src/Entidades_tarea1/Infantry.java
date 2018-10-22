@@ -1,7 +1,4 @@
-package Entidades.Units;
-
-import Entidades.Attackable;
-import Entidades.Unit;
+package Entidades;
 
 public class Infantry extends Unit {
 

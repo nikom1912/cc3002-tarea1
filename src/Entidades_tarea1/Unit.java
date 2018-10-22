@@ -12,11 +12,17 @@ public abstract class Unit implements Attackable, Attacker{
     public int getHP(){
         return this.HP;
     }
+    public int getDMG(){
+        return this.DMG;
+    }
     public boolean isAlive(){
         return (this.HP > 0);
     }
     public void attacked(int DMG) {
-        this.HP = (this.HP - DMG > this.HPMax) ? this.HPMax : this.HP - DMG;
+        this.HP = (this.HP - DMG > this.HPMax) ? this.HPMax : this.HP - DMG ;
+        if(this.HP <= 0){
+            this.HP = 0;
+            this.HPMax = 0;
+        }
     }
-    public abstract void attack(Attackable a);
 }
