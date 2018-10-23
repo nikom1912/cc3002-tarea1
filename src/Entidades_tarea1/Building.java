@@ -1,4 +1,4 @@
-package Entidades;
+package Entidades_tarea1;
 
 public abstract class Building implements Attackable{
     private int HP, HPMax;

@@ -1,4 +1,4 @@
-package Entidades;
+package Entidades_tarea1;
 
 public class Barracks extends Building{
     public Barracks(){

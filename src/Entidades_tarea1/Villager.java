@@ -1,7 +1,4 @@
-package Entidades;
-
-import Entidades.Attackable;
-import Entidades.Unit;
+package Entidades_tarea1;
 
 public class Villager extends Unit {
 

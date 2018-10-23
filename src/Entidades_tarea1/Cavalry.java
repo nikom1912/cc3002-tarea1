@@ -1,4 +1,4 @@
-package Entidades;
+package Entidades_tarea1;
 
 /**Cavalry.java
  *
@@ -11,7 +11,7 @@ public class Cavalry extends Unit {
     }
 
     public void attackInfantry(Infantry i){
-        double factor = 1.0;
+        double factor = 1.0; //effectivity factor of the attack
         int damage = (int)(factor* getDMG());
         i.attacked(damage);
     }

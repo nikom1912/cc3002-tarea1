@@ -1,4 +1,4 @@
-package Entidades;
+package Entidades_tarea1;
 
 public class Infantry extends Unit {
 
