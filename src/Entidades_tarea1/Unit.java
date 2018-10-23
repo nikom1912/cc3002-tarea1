@@ -28,7 +28,6 @@ public abstract class Unit implements Attackable, Attacker{
     }
 
     /**
-     *
      * @return Unit's damage points
      */
     public int getDMG(){
