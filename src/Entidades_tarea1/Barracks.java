@@ -1,5 +1,9 @@
 package Entidades_tarea1;
 
+/**Barracks.java
+ * barracks buildings
+ * @author nicolas machuca
+ */
 public class Barracks extends Building{
     public Barracks(){
         super(400, 600);

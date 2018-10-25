@@ -50,5 +50,7 @@ public class BarracksTest {
         assertEquals(268 - 28, barracks.getHP(), 0.01);
         monk.attack(barracks);
         assertEquals(240, barracks.getHP(), 0.01);
+        villager.attack(barracks);
+        assertEquals(240 + 5, barracks.getHP(), 0.01);
     }
 }

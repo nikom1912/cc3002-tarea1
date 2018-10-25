@@ -1,5 +1,9 @@
 package Entidades_tarea1;
 
+/**Monk.java
+ * monk unit
+ * @author nicolas machuca
+ */
 public class Monk extends Unit {
     public Monk(){
         super(1,30,2);

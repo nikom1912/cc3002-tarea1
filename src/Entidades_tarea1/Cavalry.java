@@ -1,7 +1,7 @@
 package Entidades_tarea1;
 
 /**Cavalry.java
- *
+ *cavalry unit
  * @author Nicolas Machuca
  */
 public class Cavalry extends Unit {

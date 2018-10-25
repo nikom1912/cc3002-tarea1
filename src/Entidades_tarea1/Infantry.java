@@ -1,5 +1,9 @@
 package Entidades_tarea1;
 
+/**Infantry.java
+ * infantry unit
+ * @author nicolas machuca
+ */
 public class Infantry extends Unit {
 
     public Infantry(){

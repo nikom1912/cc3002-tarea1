@@ -1,6 +1,9 @@
 package Entidades_tarea1;
 
-
+/**Siege.java
+ * siege unit
+ * @author nicolas machuca
+ */
 public class Siege extends Unit {
 
     public Siege(){

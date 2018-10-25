@@ -1,8 +1,29 @@
 package Entidades_tarea1;
 
+/**Attackable.java
+ * intarface for entities that can be attacked and take damage
+ * @author nicolas machuca
+ */
 public interface Attackable {
+    /**
+     * returns the current git points of a attackable entity
+     * @return entity's hit points
+     */
     int getHP();
+    /**
+     * Changes the hit points (HP) of the unit according to
+     * the damage points, if DMG is positive the unit
+     * loses HP otherwise the unit gains HP.
+     * The resulting HP must be less than
+     * or equal to HPMax and higher than or equal to 0.
+     * @param DMG damage points that the unit will take
+     */
     void takeDamage(int DMG);
+    /**
+     * this method allows to know if an entity
+     * is alive (has hit points) or not.
+     * @return entity's status; dead or alive (true or false)
+     */
     boolean isAlive();
 
     /**

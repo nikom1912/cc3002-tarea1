@@ -1,8 +1,17 @@
 package Entidades_tarea1;
 
+/**Building.java
+ *   abstract class for building
+ * @author Nicolas Machuca
+ */
 public abstract class Building implements Attackable{
     private int HP, HPMax;
 
+    /**Contructor object Building
+     *
+     * @param HP inicial hit points
+     * @param HPMax max hit points the Unit can have
+     */
     Building(int HP, int HPMax){
         this.HP = HP;
         this.HPMax = HPMax;

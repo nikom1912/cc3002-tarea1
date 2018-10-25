@@ -1,9 +1,15 @@
 package Entidades_tarea1;
 
+/**Castle.java
+ * castle buildings
+ * @author nicolas machuca
+ */
 public class Castle extends Building implements Attacker {
 
     private int DMG;
-
+    /**Contructor object Castle
+     *
+     */
     public Castle(){
         super(300, 500);
         DMG = 40;

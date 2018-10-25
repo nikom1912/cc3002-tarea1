@@ -1,5 +1,9 @@
 package Entidades_tarea1;
 
+/**Villager.java
+ *   villager unit
+ * @author Nicolas Machuca
+ */
 public class Villager extends Unit {
 
     public Villager(){
