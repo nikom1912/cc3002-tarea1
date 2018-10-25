@@ -3,47 +3,61 @@ package Entidades_tarea1;
 public class Infantry extends Unit {
 
     public Infantry(){
-        super(220,70,370);
+        super(220,30,370);
 
     }
-    public void attackInfantry(Infantry i){
-        double factor = 1.0;
-        int Damage = (int)(factor* getDMG());
-        i.attacked(Damage);
+    public void attack(Attackable a){
+        if(this.isAlive()){
+            a.attackedByInfantry(this);
+        }
     }
-    public void attackArcher(Archer a){
-        double factor = 1.2;
-        int Damage = (int)(factor* getDMG());
-        a.attacked(Damage);
+    public void attackedByInfantry(Infantry i){
+        if(this.isAlive()) {
+            double factor = 1.0;
+            int damage = (int) (factor * i.getDMG());
+            this.takeDamage(damage);
+        }
     }
-    public void attackCavalry(Cavalry c){
-        double factor = 1.2;
-        int Damage = (int)(factor* getDMG());
-        c.attacked(Damage);
+    public void attackByArcher(Archer a){
+        if(this.isAlive()) {
+            double factor = 1.2;
+            int damage = (int) (factor * a.getDMG());
+            this.takeDamage(damage);
+        }
     }
-    public void attackSiege(Siege s){
-        double factor = 1.2;
-        int Damage = (int)(factor* getDMG());
-        s.attacked(Damage);
+    public void attackByCavalry(Cavalry c){
+        if(this.isAlive()) {
+            double factor = 1.0;
+            int damage = (int) (factor * c.getDMG());
+            this.takeDamage(damage);
+        }
     }
-    public void attackVillager(Villager v){
-        double factor = 1.5;
-        int Damage = (int)(factor* getDMG());
-        v.attacked(Damage);
+    public void attackBySiege(Siege s){
+        if(this.isAlive()) {
+            double factor = 1.5;
+            int damage = (int) (factor * s.getDMG());
+            this.takeDamage(damage);
+        }
     }
-    public void attackMonk(Monk m){
-        double factor = 1.0;
-        int Damage = (int)(factor* getDMG());
-        m.attacked(Damage);
+    public void attackByVillager(Villager v){
+        if(this.isAlive()) {
+            double factor = 0.8;
+            int damage = (int) (factor * v.getDMG());
+            this.takeDamage(damage);
+        }
     }
-    public void attackCastle(Castle c){
-        double factor = 0.3;
-        int Damage = (int)(factor* getDMG());
-        c.attacked(Damage);
+    public void attackByMonk(Monk m){
+        if(this.isAlive()) {
+            double factor = -0.5;
+            int damage = (int) (factor * m.getDMG());
+            this.takeDamage(damage);
+        }
     }
-    public void attackBarracks(Barracks b){
-        double factor = 0.7;
-        int Damage = (int)(factor* getDMG());
-        b.attacked(Damage);
+    public void attackByCastle(Castle c){
+        if(this.isAlive()) {
+            double factor = 1.2;
+            int damage = (int) (factor * c.getDMG());
+            this.takeDamage(damage);
+        }
     }
 }

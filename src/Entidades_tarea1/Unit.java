@@ -27,6 +27,10 @@ public abstract class Unit implements Attackable, Attacker{
         return this.HP;
     }
 
+    public int getHPMax(){
+        return this.HPMax;
+    }
+
     /**
      * @return Unit's damage points
      */
@@ -40,8 +44,10 @@ public abstract class Unit implements Attackable, Attacker{
      * @return entity's status; dead or alive (true or false)
      */
     public boolean isAlive(){
-        return (this.HP > 0);
+        return (this.getHP() > 0);
     }
+
+    public abstract void attack(Attackable a);
 
     /**
      * Changes the hit points (HP) of the unit according to
@@ -51,8 +57,8 @@ public abstract class Unit implements Attackable, Attacker{
      * or equal to HPMax and higher than or equal to 0.
      * @param DMG damage points that the unit will take
      */
-    public void attacked(int DMG) {
-        this.HP = (this.HP - DMG > this.HPMax) ? this.HPMax : this.HP - DMG ;
+    public void takeDamage(int DMG) {
+        this.HP = (this.HP - DMG > this.getHPMax()) ? this.getHPMax() : this.HP - DMG ;
         if(this.HP <= 0){
             this.HP = 0;
             this.HPMax = 0;

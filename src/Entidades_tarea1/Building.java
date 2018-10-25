@@ -3,7 +3,7 @@ package Entidades_tarea1;
 public abstract class Building implements Attackable{
     private int HP, HPMax;
 
-    public Building(int HP, int HPMax){
+    Building(int HP, int HPMax){
         this.HP = HP;
         this.HPMax = HPMax;
     }
@@ -11,10 +11,13 @@ public abstract class Building implements Attackable{
     public int getHP(){
         return this.HP;
     }
-    public boolean isAlive(){
-        return (this.HP > 0);
+    public int getHPMax(){
+        return this.HPMax;
     }
-    public void attacked(int DMG) {
+    public boolean isAlive(){
+        return (this.getHP() > 0);
+    }
+    public void takeDamage(int DMG) {
         this.HP = (this.HP - DMG > this.HPMax) ? this.HPMax : this.HP - DMG ;
         if(this.HP <= 0){
             this.HP = 0;
